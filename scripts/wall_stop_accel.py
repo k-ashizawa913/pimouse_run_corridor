@@ -19,7 +19,7 @@ class WallStop():
 	data = Twist()
 	
 	accel = 0.02
-	data.liner.x = 0.0
+	data.linear.x = 0.0
 	while not rospy.is_shutdown():
 	    data.linear.x += accel
 
