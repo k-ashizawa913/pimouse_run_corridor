@@ -25,7 +25,7 @@ class WallStopAccelTest(unittest.TestCase):
 	self.assartTrue(left == right < 1000, "can't move again")
 
 	time.sleep(5.0)
-	left, right = self.set_and_get(40,0,0,9 #total: 49
+	left, right = self.set_and_get(40,0,0,9) #total: 49
 	self.assertTrue(2000 < left == right, "can't accerelate")
 
 	left, right = self.set_and_get(15,0,20,15) #total: 50
