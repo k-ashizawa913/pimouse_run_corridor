@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-import rospy,copy
-import math
+import rospy,copy,math
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Trigger, TriggerResponse
 from pimouse_ros.msg import LightSensorValues
@@ -20,6 +19,8 @@ class WallTrace():
 	data = Twist()
 	
 	accel = 0.02
+	data.linear.x = 0.0
+	data.angular.z = 0
 	while not rospy.is_shutdown():
 	    s = self.sensor_values
 	    data.linear.x += accel
